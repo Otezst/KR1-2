@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .navbar {
+      background-color: #444;
+      padding: 10px 0;
+      border-bottom: 4px solid #FFA500;
+      justify-content: center;
+      text-align: center;
+    }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar ul li {
+      margin: 0 15px;
+    }
+    .navbar ul li a {
+      color: #FFA500;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+    }
+    .navbar ul li a:hover {
+      color: #FFF;
+      border-bottom: 2px solid #FFF;
+    }
+    h1 {
+      color: #444;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #444;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #FFA500;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #FF8C00;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="section1.html">Наши услуги</a></li>
+      <li><a href="section2.html">Фото Клуба</a></li>
+      <li><a href="section3.html">Виды мишеней</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+      <li><a href="passport.html">Паспорт</a></li>
+      <li><a href="zadacha.html">Задачка</a></li>
+    </ul>
+  </header>
+
+  <div class="content">
+    <h1>Вычисление по заданному условию</h1>
+    
+    <p>Введите вещественное число для вычисления:</p>
+    <input type="number" id="inputNumber" step="any" placeholder="Введите число">
+    <button onclick="calculate()">Вычислить</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      var a = parseFloat(document.getElementById('inputNumber').value);
+      var x;
+
+      if (isNaN(a)) {
+        document.getElementById('result').innerHTML = "Пожалуйста, введите правильное число!";
+        return;
+      }
+
+      if (a < 10) {
+        x = Math.pow(a, 4);
+      } else if (a > 61) {
+        x = a;
+      } else {
+        x = a - Math.sin(Math.pow(a, 2));
+      }
+
+      document.getElementById('result').innerHTML = "Результат: " + x.toFixed(4);
+    }
+  </script>
+
+</body>
+</html>
