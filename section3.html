@@ -1,122 +1,118 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Виды мишеней и их описнаие</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar {
-      background-color: #444;
-      padding: 10px 0;
-      border-bottom: 4px solid #FFA500;
-    }
-    .navbar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .navbar ul li {
-      margin: 0 15px;
-    }
-    .navbar ul li a {
-      color: #FFA500;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-    .navbar ul li a:hover {
-      color: #FFF;
-      border-bottom: 2px solid #FFA500;
-    }
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #444;
-      margin-top: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2CfIouVt3ZU7GsSdx1bEeCDjqkJz7z3etA&s') no-repeat center center; 
-      background-size: cover; 
-    }
-    th, td {
-      padding: 15px;
-      border: 1px solid #FFA500; 
-      text-align: center;
-      color: white; 
-    }
-    th {
-      background-color: #444;
-      color: #FFA500;
-    }
-    tr:hover {
-      background-color: rgba(255, 165, 0, 0.5); 
-    }
-    img {
-      width: 100px;
-      height: auto; 
-      cursor: pointer; 
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <!-- Подключение Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #FFA500 !important;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #FFF !important;
+        }
+
+        h1 {
+            color: #444;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            font-size: 1.2rem;
+            margin: 15px 0 10px;
+        }
+
+        .product input[type="number"] {
+            width: 70px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .add-to-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #FFA500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #e69500;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <ul>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="section1.html">Наши услуги</a></li>
-            <li><a href="section2.html">Фото Клуба</a></li>
-            <li><a href="section3.html">Виды мишеней</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-            <li><a href="passport.html">Паспорт</a>
-            <li><a href="zadacha.html">Задачка</a>
-    </ul>
-  </header>
 
-  <div class="content">
-    <h1>Виды мишеней</h1>
-    <table>
-      <tr>
-        <th>Мишень</th>
-        <th>Описание</th>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://www.ozon.ru/category/mishen-dlya-strelby-grudnaya/" target="_blank">
-            <img src="https://tir-izmailovo.ru/wp-content/uploads/2016/06/target-chest.gif" alt="Описание 1"> 
-          </a>
-        </td>
-        <td>Используется для статичной стрельбы из пистолетов на дистанции 10-25 метров. Так же можно использовать для стрельбы из огнестрельного оружия ограниченого поражения (травматический пистолет или револьвер) на дистанции 5-7 метров. Высота: 500 мм</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://russkaja-ohota.ru/product/1920942/" target="_blank">
-            <img src="https://tir-izmailovo.ru/wp-content/uploads/2016/06/target-sport.jpg" alt="Описание 2"> 
-          </a>
-        </td>
-        <td>Используется для стрельбы из длинноствольного оружия на дистанции от 50 метров. Так же применяется при стрельбе из спортивных пистолетов и револьверов на дистанции 25 метров. Диаметр: 500 мм</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://www.ozon.ru/category/mishen-siluet/" target="_blank">
-            <img src="https://tir-izmailovo.ru/wp-content/uploads/2016/06/target-1b.gif" alt="Описание 3"> 
-          </a>
-        </td>
-        <td>Используется для выполнения упражнения МП-5 на 25 метров, а так же для стрельбы из охотничьих нарезных карабинов и гладкоствольных ружей. Высота: 1 600 мм</td>
-      </tr>
-    </table>
-  </div>
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Хорс</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="section2.html">Фото нашего клуба</a></li>
+                <li class="nav-item"><a class="nav-link" href="section3.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="gigab.html">Обратная связь</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <h1>Наши товары</h1>
+    <div class="row" id="productContainer">
+        <!-- Товары будут добавлены динамически -->
+    </div>
+    <div class="text-center">
+        <button class="add-to-cart" id="addToCart">Перейти в корзину</button>
+    </div>
+</div>
+
+<!-- Подключение Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Подключение внешнего JavaScript файла -->
+<script src="script.js"></script>
 
 </body>
 </html>
