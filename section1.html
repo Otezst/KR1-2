@@ -2,94 +2,115 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Наши услуги</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фото нашего клуба</title>
+  <!-- Подключение Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-  body {
+    body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar {
-      background-color: #444;
-      padding: 10px 0;
-      border-bottom: 4px solid #FFA500;
-    }
-    .navbar ul1 {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .navbar ul1 li {
-      margin: 0 15px;
-    }
-    .navbar ul1 li a {
-      color: #FFA500;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-    .navbar ul1 li a:hover {
-      color: #FFF;
-      border-bottom: 2px solid #FFA500;
-    }
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-    ul, ol {
-      text-align: left;
-      max-width: 600px;
-      margin: 20px auto;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .sub-list {
-      margin-left: 20px;
-      list-style-type: square
     }
 
+    .navbar-brand, .nav-link {
+      color: #FFA500 !important;
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+      color: #FFF !important;
+    }
+
+    h1, h2 {
+      color: #444;
+      margin-top: 20px;
+    }
+
+    .large-image {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .caption {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .small-image {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    figure {
+      margin: 20px;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #333;
+    }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <ul1>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="section1.html">Наши услуги</a></li>
-      <li><a href="section2.html">Фото Клуба</a></li>
-      <li><a href="section3.html">Виды мишеней</a></li>
-      <li><a href="contact.html">Контакты</a></li>
-      <li><a href="passport.html">Паспорт</a></li>
-      <li><a href="zadacha.html">Задачка</a></li>
-    </ul1>
-  </header>
-
-  <div class="content">
-    <h1>Наши услуги</h1>
-
-    <h2>Оружие по стоимости за выстрел (по возрастанию):</h2>
-    <ol>
-      <li>Пистолет - 50р</li>
-      <li>Винтовка - 100р</li>
-      <li>Автомат - 150р</li>
-    </ol>
-
-    <h2>Локации полигона:</h2>
-    <ul>
-      <li>Выезд в лес</li>
-      <li>В самом клубе:
-        <ul class="sub-list">
-          <li>Стойки для метания</li>
-          <li>Дальняя стрельба</li>
-          <li>Бутылки</li>
-          <li>Ближняя стрельба</li>
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Хорс</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="photo.html">Фото нашего клуба</a></li>
+          <li class="nav-item"><a class="nav-link" href="task2.html">Товары</a></li>
+          <li class="nav-item"><a class="nav-link" href="gigab.html">Обратная связь</a></li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Контент -->
+  <div class="container mt-5">
+    <h1 class="text-center">Фото из нашего Клуба</h1>
+
+    <!-- Большая картинка -->
+    <div class="text-center">
+      <img src="https://moscowseasons.com/uploads/2019/04/04/5ca5c751cb716.jpeg" alt="Стрелковый зал нашего клуба" class="large-image">
+      <div class="caption">Стрелковый зал нашего клуба</div>
+    </div>
+
+    <!-- Оружие -->
+    <h2 class="text-center mt-5">Оружие</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-6 text-center">
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEI2zMTUs3HEtq88jHg-ZQlmbY4zpmYCw6BQ&s" alt="Пистолет" class="small-image">
+          <figcaption>Пистолет</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <figure>
+          <img src="https://guns.club/upload/resize_cache/medialibrary/4b6/x7v79g2udkqld7ae9tz167tjs3g57fr4/400_270_0/Remington-700_5.png" alt="Винтовка" class="small-image">
+          <figcaption>Винтовка</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <figure>
+          <img src="https://lh5.googleusercontent.com/proxy/pdIrtkj10mJmUnZUbOS8tGvs-XrWayqaKeOUqqnZdM4h0WsFCloK4LXrFvPl96zTAeKNsB_qmJY4Zowmvx-I1YB5Ku1xnblUD3R5BLOVQU7AqL8_Or7MAw" alt="Автомат" class="small-image">
+          <figcaption>Автомат</figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 
+  <!-- Подключение Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
